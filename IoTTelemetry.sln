@@ -1,0 +1,61 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.27428.2037
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{A07B5EB6-E848-4116-A8D0-A826331D98C6}") = "IoTTelemetry", "IoTTelemetry\IoTTelemetry.sfproj", "{E9116A7A-371D-4515-B9AE-64207F4C51F1}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Actors", "Actors\Actors.csproj", "{2753BD39-BD78-45F2-A760-97B4983C85B4}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Actors.Interfaces", "Actors.Interfaces\Actors.Interfaces.csproj", "{D17FF1B9-80F2-4C08-873B-3F944F866AF6}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Domain", "Domain\Domain.csproj", "{13A6E62C-B116-46F1-BD60-7452EC570922}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Debug|x64 = Debug|x64
+		Release|Any CPU = Release|Any CPU
+		Release|x64 = Release|x64
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{E9116A7A-371D-4515-B9AE-64207F4C51F1}.Debug|Any CPU.ActiveCfg = Debug|x64
+		{E9116A7A-371D-4515-B9AE-64207F4C51F1}.Debug|x64.ActiveCfg = Debug|x64
+		{E9116A7A-371D-4515-B9AE-64207F4C51F1}.Debug|x64.Build.0 = Debug|x64
+		{E9116A7A-371D-4515-B9AE-64207F4C51F1}.Debug|x64.Deploy.0 = Debug|x64
+		{E9116A7A-371D-4515-B9AE-64207F4C51F1}.Release|Any CPU.ActiveCfg = Release|x64
+		{E9116A7A-371D-4515-B9AE-64207F4C51F1}.Release|x64.ActiveCfg = Release|x64
+		{E9116A7A-371D-4515-B9AE-64207F4C51F1}.Release|x64.Build.0 = Release|x64
+		{E9116A7A-371D-4515-B9AE-64207F4C51F1}.Release|x64.Deploy.0 = Release|x64
+		{2753BD39-BD78-45F2-A760-97B4983C85B4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2753BD39-BD78-45F2-A760-97B4983C85B4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2753BD39-BD78-45F2-A760-97B4983C85B4}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{2753BD39-BD78-45F2-A760-97B4983C85B4}.Debug|x64.Build.0 = Debug|Any CPU
+		{2753BD39-BD78-45F2-A760-97B4983C85B4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2753BD39-BD78-45F2-A760-97B4983C85B4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2753BD39-BD78-45F2-A760-97B4983C85B4}.Release|x64.ActiveCfg = Release|Any CPU
+		{2753BD39-BD78-45F2-A760-97B4983C85B4}.Release|x64.Build.0 = Release|Any CPU
+		{D17FF1B9-80F2-4C08-873B-3F944F866AF6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D17FF1B9-80F2-4C08-873B-3F944F866AF6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D17FF1B9-80F2-4C08-873B-3F944F866AF6}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{D17FF1B9-80F2-4C08-873B-3F944F866AF6}.Debug|x64.Build.0 = Debug|Any CPU
+		{D17FF1B9-80F2-4C08-873B-3F944F866AF6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D17FF1B9-80F2-4C08-873B-3F944F866AF6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D17FF1B9-80F2-4C08-873B-3F944F866AF6}.Release|x64.ActiveCfg = Release|Any CPU
+		{D17FF1B9-80F2-4C08-873B-3F944F866AF6}.Release|x64.Build.0 = Release|Any CPU
+		{13A6E62C-B116-46F1-BD60-7452EC570922}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{13A6E62C-B116-46F1-BD60-7452EC570922}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{13A6E62C-B116-46F1-BD60-7452EC570922}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{13A6E62C-B116-46F1-BD60-7452EC570922}.Debug|x64.Build.0 = Debug|Any CPU
+		{13A6E62C-B116-46F1-BD60-7452EC570922}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{13A6E62C-B116-46F1-BD60-7452EC570922}.Release|Any CPU.Build.0 = Release|Any CPU
+		{13A6E62C-B116-46F1-BD60-7452EC570922}.Release|x64.ActiveCfg = Release|Any CPU
+		{13A6E62C-B116-46F1-BD60-7452EC570922}.Release|x64.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {442DDFC2-808E-4741-91A0-09D688A21A4C}
+	EndGlobalSection
+EndGlobal
