@@ -4,6 +4,12 @@
     <Parameter Name="ActorsActorService_PartitionCount" DefaultValue="10" />
     <Parameter Name="ActorsActorService_MinReplicaSetSize" DefaultValue="3" />
     <Parameter Name="ActorsActorService_TargetReplicaSetSize" DefaultValue="3" />
+    <Parameter Name="ThingActorService_PartitionCount" DefaultValue="10" />
+    <Parameter Name="ThingActorService_MinReplicaSetSize" DefaultValue="1" />
+    <Parameter Name="ThingActorService_TargetReplicaSetSize" DefaultValue="1" />
+    <Parameter Name="ThingGroupActorService_PartitionCount" DefaultValue="10" />
+    <Parameter Name="ThingGroupActorService_MinReplicaSetSize" DefaultValue="1" />
+    <Parameter Name="ThingGroupActorService_TargetReplicaSetSize" DefaultValue="1" />
   </Parameters>
   <!-- Importe o ServiceManifest do ServicePackage. O ServiceManifestName e a ServiceManifestVersion 
        devem corresponder aos atributos Name e Version do elemento ServiceManifest definido no arquivo 
@@ -15,6 +21,16 @@
     <Service Name="ActorsActorService" GeneratedIdRef="985f0279-4db1-403b-ab75-74ce3c0f72e3|Persisted">
       <StatefulService ServiceTypeName="ActorsActorServiceType" TargetReplicaSetSize="[ActorsActorService_TargetReplicaSetSize]" MinReplicaSetSize="[ActorsActorService_MinReplicaSetSize]">
         <UniformInt64Partition PartitionCount="[ActorsActorService_PartitionCount]" LowKey="-9223372036854775808" HighKey="9223372036854775807" />
+      </StatefulService>
+    </Service>
+    <Service Name="ThingActorService" GeneratedIdRef="8e9f3e1e-5025-4659-b4ac-a7a0f3f558c5|None">
+      <StatefulService ServiceTypeName="ThingActorServiceType" TargetReplicaSetSize="[ThingActorService_TargetReplicaSetSize]" MinReplicaSetSize="[ThingActorService_MinReplicaSetSize]">
+        <UniformInt64Partition PartitionCount="[ThingActorService_PartitionCount]" LowKey="-9223372036854775808" HighKey="9223372036854775807" />
+      </StatefulService>
+    </Service>
+    <Service Name="ThingGroupActorService" GeneratedIdRef="1afc3113-4096-46e8-a9ea-c93b50739cfd|None">
+      <StatefulService ServiceTypeName="ThingGroupActorServiceType" TargetReplicaSetSize="[ThingGroupActorService_TargetReplicaSetSize]" MinReplicaSetSize="[ThingGroupActorService_MinReplicaSetSize]">
+        <UniformInt64Partition PartitionCount="[ThingGroupActorService_PartitionCount]" LowKey="-9223372036854775808" HighKey="9223372036854775807" />
       </StatefulService>
     </Service>
     <!-- A seção abaixo cria instâncias dos tipos de serviço quando uma instância deste 

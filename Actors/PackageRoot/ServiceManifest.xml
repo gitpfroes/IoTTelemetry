@@ -15,6 +15,34 @@
         </Extension>
       </Extensions>
     </StatefulServiceType>
+    <StatefulServiceType ServiceTypeName="ThingActorServiceType">
+      <Extensions>
+        <Extension Name="__GeneratedServiceType__" GeneratedId="8e9f3e1e-5025-4659-b4ac-a7a0f3f558c5|None">
+          <GeneratedNames xmlns="http://schemas.microsoft.com/2015/03/fabact-no-schema">
+            <DefaultService Name="ThingActorService" />
+            <ReplicatorEndpoint Name="ThingActorServiceReplicatorEndpoint" />
+            <ReplicatorConfigSection Name="ThingActorServiceReplicatorConfig" />
+            <ReplicatorSecurityConfigSection Name="ThingActorServiceReplicatorSecurityConfig" />
+            <StoreConfigSection Name="ThingActorServiceLocalStoreConfig" />
+            <ServiceEndpointV2 Name="ThingActorServiceEndpointV2" />
+          </GeneratedNames>
+        </Extension>
+      </Extensions>
+    </StatefulServiceType>
+    <StatefulServiceType ServiceTypeName="ThingGroupActorServiceType">
+      <Extensions>
+        <Extension Name="__GeneratedServiceType__" GeneratedId="1afc3113-4096-46e8-a9ea-c93b50739cfd|None">
+          <GeneratedNames xmlns="http://schemas.microsoft.com/2015/03/fabact-no-schema">
+            <DefaultService Name="ThingGroupActorService" />
+            <ReplicatorEndpoint Name="ThingGroupActorServiceReplicatorEndpoint" />
+            <ReplicatorConfigSection Name="ThingGroupActorServiceReplicatorConfig" />
+            <ReplicatorSecurityConfigSection Name="ThingGroupActorServiceReplicatorSecurityConfig" />
+            <StoreConfigSection Name="ThingGroupActorServiceLocalStoreConfig" />
+            <ServiceEndpointV2 Name="ThingGroupActorServiceEndpointV2" />
+          </GeneratedNames>
+        </Extension>
+      </Extensions>
+    </StatefulServiceType>
   </ServiceTypes>
   <CodePackage Name="Code" Version="1.0.0">
     <EntryPoint>
@@ -28,6 +56,10 @@
     <Endpoints>
       <Endpoint Name="ActorsActorServiceEndpointV2" />
       <Endpoint Name="ActorsActorServiceReplicatorEndpoint" />
+      <Endpoint Name="ThingActorServiceEndpointV2" />
+      <Endpoint Name="ThingActorServiceReplicatorEndpoint" />
+      <Endpoint Name="ThingGroupActorServiceEndpointV2" />
+      <Endpoint Name="ThingGroupActorServiceReplicatorEndpoint" />
     </Endpoints>
   </Resources>
   <!-- O conteúdo será gerado durante a build -->

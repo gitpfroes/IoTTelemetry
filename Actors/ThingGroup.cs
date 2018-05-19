@@ -2,6 +2,8 @@
 using Domain;
 using Microsoft.ServiceFabric.Actors;
 using Microsoft.ServiceFabric.Actors.Runtime;
+using Microsoft.WindowsAzure.Storage;
+using Microsoft.WindowsAzure.Storage.Table;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -13,6 +15,11 @@ namespace Actors
     public class ThingGroup : Actor, IThingGroup
     {
         private ThingGroupState State = new ThingGroupState();
+
+        private string connectionString = "DefaultEndpointsProtocol=https;AccountName=testepaola;AccountKey=DUFAWmh+e4y9pQsqeV+kuIfYlRG72RKmvoTCthsHUDHMjEemr3AEqqnK8YekdWvxS9bx45c2V8tJyWXXxo01cA==;EndpointSuffix=core.windows.net";
+        private CloudStorageAccount cloudStorageAccount;
+        private CloudTable cloudTable;
+
         public ThingGroup(ActorService actorService, ActorId actorId) : base(actorService, actorId)
         {
         }
@@ -23,18 +30,27 @@ namespace Actors
             State.faultsPerRegion = new Dictionary<string, int>();
             State.faultyDevices = new List<ThingInfo>();
 
+            //Inicializa storage
+            var cloudTableClient = cloudStorageAccount.CreateCloudTableClient();
+            cloudTable = cloudTableClient.GetTableReference("demotable");
+            cloudTable.CreateIfNotExistsAsync();
+
             return base.OnActivateAsync();
         }
 
         public Task RegisterDevice(ThingInfo deviceInfo)
         {
             State.devices.Add(deviceInfo);
+            TableOperation insertOperation = TableOperation.InsertOrReplace(deviceInfo);
+            cloudTable.ExecuteAsync(insertOperation);
             return Task.FromResult(true);
         }
 
         public Task UnregisterDevice(ThingInfo deviceInfo)
         {
             State.devices.Remove(deviceInfo);
+            TableOperation deleteOperation = TableOperation.Delete(deviceInfo);
+            cloudTable.ExecuteAsync(deleteOperation);
             return Task.FromResult(true);
         }
 
