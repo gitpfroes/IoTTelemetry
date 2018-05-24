@@ -5,7 +5,7 @@ using System.Text;
 
 namespace Domain
 {
-    public class ThingState : TableEntity
+    public class ThingState
     {
         public List<ThingTelemetry> telemetry;
         public ThingInfo deviceInfo;

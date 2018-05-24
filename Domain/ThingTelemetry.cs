@@ -5,7 +5,7 @@ using System.Text;
 
 namespace Domain
 {
-    public class ThingTelemetry : TableEntity
+    public class ThingTelemetry
     {
         public bool DevelopedFault { get; set; }
         public string Region { get; set; }

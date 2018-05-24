@@ -10,6 +10,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
+
 namespace Actors
 {
     public class ThingGroup : Actor, IThingGroup
@@ -22,6 +23,7 @@ namespace Actors
 
         public ThingGroup(ActorService actorService, ActorId actorId) : base(actorService, actorId)
         {
+            CloudStorageAccount.TryParse(connectionString, out cloudStorageAccount);
         }
 
         protected override Task OnActivateAsync()
@@ -40,9 +42,11 @@ namespace Actors
 
         public Task RegisterDevice(ThingInfo deviceInfo)
         {
-            State.devices.Add(deviceInfo);
+            //Uploads device to cloud
             TableOperation insertOperation = TableOperation.InsertOrReplace(deviceInfo);
             cloudTable.ExecuteAsync(insertOperation);
+
+            State.devices.Add(deviceInfo);
             return Task.FromResult(true);
         }
 

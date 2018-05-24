@@ -20,7 +20,7 @@ namespace ClienteIot
             }
             catch (Exception e)
             {
-
+                Console.WriteLine(e.ToString());
             }
         }
 

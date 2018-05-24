@@ -5,7 +5,7 @@ using System.Text;
 
 namespace Domain
 {
-    public class ThingGroupState : TableEntity
+    public class ThingGroupState
     {
         public List<ThingInfo> devices;
         public Dictionary<string, int> faultsPerRegion;
